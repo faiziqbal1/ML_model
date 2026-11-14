@@ -1,0 +1,23 @@
+# Node
+apps/web/node_modules/
+apps/web/dist/
+apps/web/.vite/
+
+# PHP
+apps/api/vendor/
+apps/api/storage/*.key
+apps/api/storage/logs/
+apps/api/storage/framework/
+apps/api/bootstrap/cache/
+apps/api/.env
+
+# Python
+services/ml/.venv/
+services/ml/__pycache__/
+services/ml/**/*.pyc
+services/ml/.env
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/

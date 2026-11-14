@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: modelforge-postgres
+    environment:
+      POSTGRES_DB: modelforge
+      POSTGRES_USER: modelforge
+      POSTGRES_PASSWORD: modelforge
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    container_name: modelforge-redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  pgdata:
