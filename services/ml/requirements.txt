@@ -1,8 +1,10 @@
 fastapi==0.116.1
+python-multipart==0.0.20
 uvicorn[standard]==0.35.0
-pandas==2.3.2
+pandas==2.3.3
 numpy==2.3.2
-scikit-learn==1.7.2
+scikit-learn==1.8.0
 joblib==1.5.1
-openpyxl==3.3.1
+openpyxl==3.1.5
+xlrd==2.0.2
 python-dotenv==1.1.1

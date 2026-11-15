@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Organization;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
@@ -11,8 +10,11 @@ class DashboardController extends Controller
 {
     public function index(Request $request)
     {
-        $organizationCount = Organization::count();
-        $projectCount = Project::count();
+        $organizationIds = $request->user()->organizationMemberships()
+            ->where('status', 'active')
+            ->pluck('organization_id');
+        $organizationCount = $organizationIds->count();
+        $projectCount = Project::query()->whereIn('organization_id', $organizationIds)->count();
 
         return response()->json([
             'user' => [

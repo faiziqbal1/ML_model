@@ -16,6 +16,11 @@ class Dataset extends Model
         'name',
         'file_path',
         'status',
+        'metadata',
+    ];
+
+    protected $casts = [
+        'metadata' => 'array',
     ];
 
     public function organization(): BelongsTo

@@ -35,4 +35,10 @@ return [
         ],
     ],
 
+    'ml' => [
+        'url' => env('ML_SERVICE_URL', 'http://127.0.0.1:8001'),
+        'token' => env('ML_SERVICE_TOKEN'),
+        'timeout_seconds' => (int) env('ML_TRAINING_TIMEOUT_SECONDS', 600),
+    ],
+
 ];

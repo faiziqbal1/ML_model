@@ -28,4 +28,9 @@ class Project extends Model
     {
         return $this->hasMany(Dataset::class);
     }
+
+    public function jobs(): HasMany
+    {
+        return $this->hasMany(MlJob::class);
+    }
 }

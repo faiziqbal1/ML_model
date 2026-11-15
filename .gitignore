@@ -16,6 +16,7 @@ services/ml/.venv/
 services/ml/__pycache__/
 services/ml/**/*.pyc
 services/ml/.env
+services/ml/artifacts/
 
 # OS/editor
 .DS_Store
